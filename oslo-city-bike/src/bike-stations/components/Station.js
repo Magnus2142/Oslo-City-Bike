@@ -4,10 +4,10 @@ import styled from 'styled-components'
 function Station(props) {
     return (
         <StationBody>
-            <h2>{props.stationName}</h2>
+            <h3>{props.stationName}</h3>
             <div className="station-status-container">
                 <p>Bikes left: {props.bikesLeft}</p>
-                <p>Free spots: {props.freeSpots}</p>
+                <p>Free docks: {props.freeDocks}</p>
             </div>
         </StationBody>
     )
@@ -30,7 +30,7 @@ const StationBody = styled.div`
     
     transition: background-color 0.5s;
 
-    h2{
+    h3{
         padding: 0 10px;
     }
 
@@ -47,6 +47,8 @@ const StationBody = styled.div`
         cursor: pointer;
         background-color: #283143;
     }
+
+    
 `
 
 export default Station

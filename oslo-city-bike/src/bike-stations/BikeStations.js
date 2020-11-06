@@ -4,7 +4,7 @@ import "./BikeStations.css"
 import Station from './components/Station'
 import { useFetch } from "./useFetch.js";
 
-    
+
 function BikeStations() {
 
     const [stationInformation, infoLoading] = useFetch("https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json");
@@ -31,7 +31,7 @@ function BikeStations() {
                 .sort((a, b) => a.name > b.name ? 1 : -1)
                 .map((stationInfo, index) => {
                     if(stationInformation.data.stations[index].name.toLowerCase().includes(searchTerm)){
-                        return <Station stationName={stationInfo.name} bikesLeft={stationStatus.data.stations[index].num_bikes_available} freeSpots={stationStatus.data.stations[index].num_docks_available} key={index}/>                        
+                        return <Station stationName={stationInfo.name} bikesLeft={stationStatus.data.stations[index].num_bikes_available} freeDocks={stationStatus.data.stations[index].num_docks_available} key={index}/>                        
                     }else{
                         return null;
                     }

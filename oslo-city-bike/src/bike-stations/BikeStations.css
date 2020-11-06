@@ -34,11 +34,30 @@
     font-size: 15px; 
 }
 .bike-station-body .container{
-    width: 40%;
+    width: 50%;
     margin-top: 13%;
 }
 
 .bike-station-body h1{
     color: white;
     margin: 0;
+}
+
+
+@media (max-width: 1400px){
+    .bike-station-body .container{
+        width: 65%;
+    }
+}
+
+@media (max-width: 1000px){
+    .bike-station-body .container{
+        width: 80%;
+    }
+}
+
+@media (max-width: 700px){
+    .bike-station-body .container{
+        width: 85%;
+    }
 }
